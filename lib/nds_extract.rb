@@ -3,7 +3,9 @@ require 'directors_database'
 
 def directors_totals(nds)
   
-  gross_hash = {}
+  gross_hash = {
+    directors_database[director_index] => directors_totals[totals_index]
+  }
   director_totals = []
   director_index = 0 
   while director_index < directors_database.length do
