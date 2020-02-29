@@ -4,7 +4,7 @@ require 'directors_database'
 def directors_totals(nds)
 
   director_index = 0
-  gross_hash = {}
+  totals = {}
   
   while director_index < nds.length do
     director_name = nds[director_index][:name]
@@ -15,7 +15,9 @@ def directors_totals(nds)
     totals[director_name] += nds[director_index][:movies][movie_index][:worldwide_gross]
     movie_index += 1
   end
+  
   director_index += 1 
 end
+
 totals 
 end
