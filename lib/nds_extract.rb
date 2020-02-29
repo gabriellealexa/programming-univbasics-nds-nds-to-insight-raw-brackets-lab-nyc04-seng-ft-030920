@@ -13,6 +13,9 @@ def directors_totals(nds)
   end
   director_index += 1 
 end
+
+
+director_total += directors_database[director_index][:movies][movie_index][:worldwide_gross]
   
   hash = {
     directors_database[0] => 
