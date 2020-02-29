@@ -12,16 +12,18 @@ def directors_totals(nds)
     director_totals << directors_database[director_index][:movies][movie_index][:worldwide_gross]
     movie_index += 1
   end
+  totals_index = 0
+  while totals_index < directors_totals.length do 
+  gross_hash = {
+    directors_database[director_index] => directors_totals[totals_index]
+  }
+  totals_index +=1
   director_index += 1
 end
   
   
-  gross_hash = {
-    directors_database[director_index] => directors_totals[totals_index]
-  }
+ 
   
-  director_totals += 1 
-  directors_data_index += 1 
   
   
   
