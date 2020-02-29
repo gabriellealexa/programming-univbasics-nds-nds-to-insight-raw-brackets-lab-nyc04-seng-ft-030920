@@ -3,24 +3,28 @@ require 'directors_database'
 
 def directors_totals(nds)
   
-  total = 0 
+  gross_hash = {}
+  director_totals = []
   director_index = 0 
   while director_index < directors_database.length do
     movie_index = 0 
-    while movie_index < directors_database[directors_index].length do
-    total += directors_database[director_index][:movies][movie_index][:worldwide_gross]
+    while movie_index < directors_database[director_index].length do
+    director_totals << directors_database[director_index][:movies][movie_index][:worldwide_gross]
     movie_index += 1
   end
-  director_index += 1 
+  director_index += 1
 end
-
-
-director_total += directors_database[director_index][:movies][movie_index][:worldwide_gross]
+  
   
   hash = {
-    directors_database[0] => 
+    directors_database[director_index] => director_totals[0],
+    directors_database[directors_data_index] =>, director_totals[dt_index]
+    directors_database[2] =>, director_totals[2]
+    directors_database[3] => director_totals[3]
   }
   
+  director_totals += 1 
+  directors_data_index += 1 
   
   
   
