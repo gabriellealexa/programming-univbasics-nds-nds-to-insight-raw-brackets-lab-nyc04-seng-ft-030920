@@ -12,14 +12,9 @@ def directors_totals(nds)
     movie_index = 0
     
     while movie_index < nds[director_index].length do
-    totals[director_name] += nds[director_index][:movies][movie_index]
+    totals[director_name] += nds[director_index][:movies][movie_index][:worldwide_gross]
+    movie_index += 1
   end
-  totals_index = 0
-  while totals_index < directors_totals.length do 
-  gross_hash = {
-    directors_database[director_index][:name] => directors_totals[totals_index]
-  }
-  totals_index +=1
-  director_index += 1
+  totals[director_name] += 1 
 end
 end
